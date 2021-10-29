@@ -21,6 +21,7 @@ body {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    padding: 0 150px;
 }
 .side {
     width: 50%;
@@ -51,7 +52,14 @@ body {
 
 .descr_container {
     display: flex;
+    text-align: left;
 }
 .img_card {
     width: 200px;
+}
+.description {
+    padding-left: 25px;
+}
+.card_title {
+    margin-bottom: 15px;
 }
