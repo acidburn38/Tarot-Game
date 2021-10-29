@@ -1,0 +1,13 @@
+.container {
+    display: flex;
+}
+.card_back {
+    width: 90px;
+    margin: 5px 8px;
+}
+.img_card {
+    width: 300px;
+}
+.row {
+    display: flex;
+}
