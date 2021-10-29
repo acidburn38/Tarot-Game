@@ -58,9 +58,12 @@ function clicCarte(event){
 
     carteAleatoire();
 
-    // // Rotation carte
-    // let card_Picked = document.getElementById('picked_card');
-    // card_Picked.setAttribute('class','card_flipped');
+    // Rotation carte
+    let card_Picked = document.getElementById('cardToFlip');
+    card_Picked.setAttribute('class','card_flipped');
+    let card_back = document.getElementById('cardFlipped');
+    card_back.innerHTML = '<img class="img_card" src="./assets/img/'+ imageCard +'" alt="">';
+
 
     // Ajout Titre
     placeTitre.innerHTML = titreCarte;
