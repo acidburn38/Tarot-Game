@@ -1,6 +1,6 @@
-// Nombre Aléatoire d'index
-let indexCard = Math.floor(Math.random()*16);
 
+
+// Listes Cartes [ Fichiers - Titre Cartes - Description Cartes]
 let file_name = ['KingofCups.jpg', 'KingOfPentacles.jpg', 'KingOfSwords.jpg', 'KingOfWand.jpg', 'KnightofCups.jpg', 'KnightOfPentacle.jpg', 'KnightOfSwords.jpg', 'KnightOfWands.jpg', 'PageOfCups.jpg', 'PageOfPentacles.jpg', 'PageOfSwords.jpg', 'PageOfWands.jpg', 'QueenofCups.jpg', 'QueenOfPentacles.jpg', 'QueenOfSwords.jpg', 'QueenOfWands.jpg'];
 
 let card_name = ['King of Cups', 'King Of Pentacles', 'King Of Swords', 'King Of Wand', 'Knight of Cups', 'Knight Of Pentacle', 'Knight Of Swords', 'Knight Of Wands', 'Page Of Cups', 'Page Of Pentacles', 'Page Of Swords', 'Page Of Wands', 'Queen of Cups', 'Queen Of Pentacles', 'Queen Of Swords', 'Queen Of Wands'];
@@ -22,24 +22,52 @@ let info_card = ["Keywords UPRIGHT: Emotionally balanced, compassionate, diploma
 "Keywords UPRIGHT: Courage, confidence, independence, social butterfly, determination. <br>REVERSED: Self-respect, self-confidence, introverted, re-establish sense of self. <br>Description The Queen of Wands sits upon a throne decorated with lions facing opposing directions, a symbol of fire and strength. In her left hand, on her crown and behind her are sunflowers, symbolising life, fertility, joy and satisfaction, and her right hand holds a wand with one small sprout springing to life. A black cat sits at her feet, a sign that while this Queen is bold and outgoing she is also in touch with her shadow self – the darker, lesser-known side of her being."];
 
 
-//Ajouter événement de clic sur chaque carte
-let placeCartes = document.getElementsByClassName('carte');
-    for (let indexCarte = 0; indexCarte < 1; indexCarte++) {
-        placeCartes[indexCarte].addEventListener("click", clicCarte);
-    }
+
     
 // Variables
 let descriptionCarte;
 let titreCarte;
+let indexCard;
+let imageCard;
+
 
 // Emplacement DOM
 let placeDescription = document.getElementById('description');
+let placeTitre = document.getElementById('title');
+
+// Fonction Carte Aléatoire
+    // Nombre Aléatoire d'index
+function carteAleatoire(){
+    indexCard = Math.floor(Math.random()*16);
+    titreCarte = card_name[indexCard];
+    descriptionCarte = info_card[indexCard];
+    imageCard = file_name[indexCard];
+    console.log('Titre Carte', titreCarte);
+    console.log('Description Carte', descriptionCarte);
+}
+
+//Ajouter événement de clic sur chaque carte
+let placeCartes = document.getElementsByClassName('card');
+for (let indexCarte = 0; indexCarte < placeCartes.length; indexCarte++) {
+    placeCartes[indexCarte].addEventListener("click", clicCarte);
+    }
 
 // Fonction pour cliquer sur carte et faire se retourner la carte
 function clicCarte(event){
     event.preventDefault();
-    let card_Picked = document.getElementById('picked_card');
-    card_Picked.setAttribute('class','card_flipped');
+
+    carteAleatoire();
+
+    // // Rotation carte
+    // let card_Picked = document.getElementById('picked_card');
+    // card_Picked.setAttribute('class','card_flipped');
+
+    // Ajout Titre
+    placeTitre.innerHTML = titreCarte;
+    
+    // Ajout Description
+    placeDescription.innerHTML = descriptionCarte;
+
 }
 
 
