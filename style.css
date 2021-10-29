@@ -30,7 +30,9 @@ body {
     text-align: center;
 }
 
-
+.black {
+    color: rgb(19, 19, 19);
+}
 
 .card_back {
     width: 90px;

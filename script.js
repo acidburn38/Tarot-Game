@@ -67,9 +67,11 @@ function clicCarte(event){
 
 
     // Ajout Titre
+    placeTitre.removeAttribute('class','black');
     placeTitre.innerHTML = titreCarte;
     
     // Ajout Description
+    placeDescription.removeAttribute('class','black');
     placeDescription.innerHTML = descriptionCarte;
 
 }
