@@ -11,9 +11,11 @@ body {
     text-transform: uppercase;
     letter-spacing: 2px;
 }
-
 .title {
     margin-top: 0;
+}
+.txt {
+    font-size: .8rem;
 }
 
 .container {
@@ -53,6 +55,10 @@ body {
 .descr_container {
     display: flex;
     text-align: left;
+    padding-top: 200px;
+}
+.card_description {
+    padding-right: 190px;
 }
 .img_card {
     width: 200px;
