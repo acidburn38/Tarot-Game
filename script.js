@@ -7,7 +7,7 @@ let info_card = ["Keywords UPRIGHT: Emotionally balanced, compassionate, diploma
 
 //Ajouter événement de clic sur chaque carte
 let placeCartes = document.getElementsByClassName('carte');
-    for (let indexCarte = 0; indexCarte < placeCartes.length; indexCarte++) {
+    for (let indexCarte = 0; indexCarte < 1; indexCarte++) {
         placeCartes[indexCarte].addEventListener("click", clicCarte);
     }
     
